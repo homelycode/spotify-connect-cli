@@ -1,0 +1,55 @@
+{
+  "name": "spotify-connect-cli",
+  "version": "1.0.0",
+  "description": "Control your Spotify Connect devices using the command line interface.",
+  "dependencies": {
+    "ansi-colors": "^3.2.3",
+    "common-bin": "^2.8.0",
+    "configstore": "^4.0.0",
+    "debug": "^4.1.0",
+    "enquirer": "^2.2.0",
+    "micro": "^9.3.3",
+    "microrouter": "^3.1.3",
+    "opn": "^5.4.0",
+    "ora": "^3.0.0",
+    "query-string": "^6.2.0",
+    "simple-oauth2": "^2.2.1"
+  },
+  "devDependencies": {
+    "@types/micro": "^7.3.3",
+    "egg-bin": "^4.3.7",
+    "egg-ci": "^1.8.0",
+    "eslint": "^4.18.1",
+    "eslint-config-egg": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "server": "node ./lib/server/index.js",
+    "lint": "eslint .",
+    "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "ci": "npm run lint && egg-bin pkgfiles --check && npm run cov",
+    "pkgfiles": "egg-bin pkgfiles"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "eslintIgnore": [
+    "coverage",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "files": [
+    "lib",
+    "index.js",
+    "bin"
+  ],
+  "author": "Roy Li <me@dada.li>",
+  "license": "MIT"
+}
