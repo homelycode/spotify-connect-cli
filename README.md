@@ -27,3 +27,7 @@ Control your Spotify Connect devices using the command line interface.
 ```bash
 npm i spotify-connect-cli --save
 ```
+
+Create an App, add `http://127.0.0.1:48400/callback` as a valid redirect.
+
+Run auth command with the env SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET set.
